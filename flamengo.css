@@ -5,7 +5,7 @@
    display: none;
 }
 header,main,footer,nav{
-    width: 800px;
+    width: 59;
 }
 header, nav, .marca{
     display: flex;
@@ -34,11 +34,11 @@ header, nav, .marca{
     margin-top: 20px;
     font-weight: 300;
 }
-.opa{
+.aba{
     width:200px;
     height:50px ;
     align-items: center;
-    
+    transition: 1s;
 }
 nav{
     height: 50px;
@@ -66,13 +66,16 @@ ul{
 .Times, .Jogos, .Campeoes{
     flex-direction: column;
 }
-nav .opa:hover{
+nav .aba:hover{
     background-color: #34eb3d;
 }
 h1,p{
     font-family: 'poppins','sans-serif';
     font-weight: 200;
 
+}
+p{
+    font-weight: 300;
 }
 a{
     color: black;
@@ -82,7 +85,7 @@ a{
 main{
  
     background-color: #d9d9d9;
-    height: 614px;
+    height: 450px;
 }
 main h1{
     color: #41268D;
@@ -101,14 +104,23 @@ main h1{
 .escudo img{
     margin-top: 20px;
     margin-left: 40px;
-    width: 150px;
-    height: 150px;
+    
+    
+}
+.coisastime{
+    display: flex;
+    flex-direction: row;
+}
+.ultitulo{
+    margin-top: 10px;
+    margin-left: 25px;
 }
 .infotime{
-    width: 400px;
+    
+    width: 300px;
     height: 264px;
-    margin-right: 200px;
-    margin-top: 20px;
+    margin-right: 80px;
+    margin-top: 0px;
     font-weight: 900px;
 }
 .textcomp{
@@ -161,7 +173,7 @@ footer{
       
         border: none;
     }    
-    .slogan, nav{
+    .slogan, nav, .ultitulo{
         display: none;
     }
     .mobmain{
@@ -174,12 +186,16 @@ footer{
     }
     .time{
         margin-left: 30px;
+       
         display: flex;
         flex-direction: column;
     
     }
+    
     .infotime{
         width: 80%;
+        margin-left: 20px;
+        margin-top: 20px;
     }
     .textcomp{
         display: none;
@@ -252,5 +268,4 @@ footer{
         width: 500px;
      
     }
-    
 }

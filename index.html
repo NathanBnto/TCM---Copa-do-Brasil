@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/99451e1fb0.js" crossorigin="anonymous"></script>
-    <link href="cssdacopa.css" rel="stylesheet">
+    <link rel="stylesheet" href="cssdacopa.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,46 +17,111 @@
 <body>
     <div class="tudo">
         <div class="mobmain">
-            <div class="mobile">
-                <i class=" fa-sharp fa-solid fa-bars"></i>
+            <div class="mobile" id="mobile">
+                <i class=" fa-sharp fa-solid fa-bars" id ="btn-exp" onclick="menumobile()"></i>
+                <div class="Times" onclick="mostratimesmob()">
+                    <div class="texto mobcoisas">
+                      <p>Times</p>
+                      <i class=" timesicon aba fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul class="mobmenu" id="menutimes">
+                        <li>
+                            <a href="flamengo.html" target="principal" onclick="fechamenu()">Flamengo</a>
+                        </li>
+                        <li>
+                            <a href="vasco.html" target="principal" onclick="fechamenu()">Vasco</a>
+                        </li>
+                        <li>
+                            <a href="galo.html" target="principal" onclick="fechamenu()">Atlético-MG</a>
+                        </li>
+                        <li>
+                            <a href="times.html" target="principal" onclick="fechamenu()">Outros</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Jogos" onclick="mostrajogosmob()">
+                    <div class="texto mobcoisas">
+                        <p>Jogos</p>
+                        <i class=" timesicon aba fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul class="mobmenu" id="menujogos">
+                        <li>
+                            <a href="oitavas.html" onclick="fechamenu()">Oitavas</a>
+                        </li>
+                        <li>
+                            <a href="quartas.html" onclick="fechamenu()">Quartas</a>
+                        </li>
+                        <li>
+                            <a href="semi.html" onclick="fechamenu()">Semi-Final</a>
+                        </li>
+                        <li>
+                            <a href="final.html" onclick="fechamenu()">Final</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Campeoes" onclick="mostracampsmob()">
+                    <div class="texto mobcoisas">
+                        <p>Campeões</p>
+                        <i class=" timesicon aba fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul class="mobmenu" id="menucamps">
+                        <li>
+                            <a href="cruzeiro.html" target="principal" onclick="fechamenu()">Cruzeiro</a>
+                        </li>
+                        <li>
+                            <a href="gremio.html" target="principal" onclick="fechamenu()">Gremio</a>
+                        </li>
+                        <li>
+                            <a href="flamengo.html" target="principal" onclick="fechamenu()">Flamengo</a>
+                        </li>
+                        <li>
+                            <a href="campeoes.html" target="principal" onclick="fechamenu()">Outros</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="texto mobcoisas">
+                    <a href="chaveamento.html" target="principal" style="color: #d9d9d9;" onclick="fechamenu()"><p>Chaveamento</p></a>
+                </div>
             </div>
-            <div class="normal">
+            <div class="normal" id="normal">
                 <header>
-                    <div class="logo">
+                
+                    <div class="logo" id="logo">
 
                     </div>
-                    <div class="slogan">
+                    
+                    <div class="slogan" id="slogan">
                         <h1>A Competição mais buscada do Brasil</h1>
                     </div>
                 </header>
                 <nav>
 
-                    <div class="opa Times" onmouseover="mostratimes()" onmouseleave="somecoisa()">
+                    <div class="aba Times" onmouseover="mostratimes()" onmouseleave="somecoisa()">
                         <div class="texto">
                             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<p>Times&nbsp;participantes</p>
-                            &nbsp;<i class="opa fa-solid fa-caret-down"></i>
+                            &nbsp;<i class=" timesicon aba fa-solid fa-caret-down"></i>
                         </div>
-                        <ul id="mtimes">
+                        <ul class="pcmenu" id="mtimes">
                             <li>
-                                <a href="flamengo.html">Flamengo</a>
+                                <a href="flamengo.html" target="principal">Flamengo</a>
                             </li>
                             <li>
-                                <a href="vasco.html">Vasco</a>
+                                <a href="vasco.html" target="principal">Vasco</a>
                             </li>
                             <li>
-                                <a href="galo.html">Atlético-MG</a>
+                                <a href="galo.html" target="principal">Atlético-MG</a>
                             </li>
                             <li>
-                                <a href="times.html">Outros</a>
+                                <a href="times.html" target="principal">Outros</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="opa Jogos" onmouseover="mostrajogos()" onmouseleave="somecoisa()">
+                    <div class="aba Jogos" onmouseover="mostrajogos()" onmouseleave="somecoisa()">
                         <div class="texto" id="textojogo">
                         <p>Jogos</p>
-                        <i class="fa-solid fa-caret-down"></i> &nbsp; &nbsp;
+                        <i id ="jogosicon"class="fa-solid fa-caret-down"></i> &nbsp; &nbsp;
                         </div>
-                        <ul id="mjogos">
+                        <ul class="pcmenu" id="mjogos">
                             <li>
                                 <a href="oitavas.html">Oitavas</a>
                             </li>
@@ -71,32 +136,33 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="opa Campeoes" onmouseover="mostracamps()" onmouseleave="somecoisa()">
+                    <div class="aba Campeoes" onmouseover="mostracamps()" onmouseleave="somecoisa()">
                         <div class="texto" id ="textocamps">
                         <p>Campeões</p>
-                        &nbsp;<i class="fa-solid fa-caret-down"></i> &nbsp; &nbsp;
+                        &nbsp;<i id="campeoesicon" class="fa-solid fa-caret-down"></i> &nbsp; &nbsp;
                         </div>
-                        <ul id="mcamps">
+                        <ul class="pcmenu" id="mcamps">
                             <li>
-                                <a href="cruzeiro.html">Cruzeiro</a>
+                                <a href="cruzeiro.html" target="principal">Cruzeiro</a>
                             </li>
                             <li>
-                                <a href="gremio.html">Gremio</a>
+                                <a href="gremio.html" target="principal">Gremio</a>
                             </li>
                             <li>
-                                <a href="Flamengo.html">Flamengo</a>
+                                <a href="flamengo.html" target="principal">Flamengo</a>
                             </li>
                             <li>
-                                <a href="campeoes.html">Outros</a>
+                                <a href="campeoes.html" target="principal">Outros</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="opa chaveamento">
-                        <p>Chaveamento</p>
+                    <div class="aba chaveamento">
+                        <a href="chaveamento.html" target="principal" style="color: black;"><p>Chaveamento</p></a>
                     </div>
                 </nav>
                 <main>
-                    <h1>ÚLTIMOS JOGOS</h1>
+                    <iframe src="abertura.html" name="principal"></iframe>
+                    <!--<h1>ÚLTIMOS JOGOS</h1>
                     
                     <div class="col1">
                         <div class="mobjogo jogo jogo1">
@@ -125,7 +191,7 @@
                             </a>
                             <p>Goiás 0x0 São Paulo</p>
                         </div>
-                    </div>
+                    </div>-->
 
                 </main>
             </div>
@@ -133,17 +199,15 @@
         <footer>
             <div class="redes">
                 <p>Cheque nossas redes sociais:</p>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
+                <a href="https://www.instagram.com/copadobrasilcbf/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/copadobrasilcbf/?locale=pt_BR" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/CopaDoBrasilCBF" target="_blank"><i class="fa-brands fa-twitter"></i></a>
             </div>
             <div class="marca">
                 <div class="eu">
                     <p>Por:&nbsp;Nathan&nbsp;Bento</p>
                 </div>
-                <div class="direitos">
-                    <p>Copa&nbsp;do&nbsp;Brasil©Todos&nbsp;os&nbsp;direitos&nbsp;reservados</p>
-                </div>
+                
             </div>
         </footer>
     </div>

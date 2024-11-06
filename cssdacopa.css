@@ -1,15 +1,23 @@
-*{
+  *{
     margin: auto;
 }
 .mobile{
    display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   
 }
-header,main,footer,nav{
+ 
+
+header,main,footer,nav, iframe{
     width: 800px;
 }
-header, nav, .marca{
+header, nav, .marca, .mobcoisas{
     display: flex;
+    
 }
+
 .logo, .slogan{
     height: 150px;
     border: solid 1px black;
@@ -33,26 +41,50 @@ header, nav, .marca{
     margin-top: 20px;
     font-weight: 300;
 }
-.opa{
+.aba{
     width:200px;
     height:50px ;
     align-items: center;
-    
+    transition: ease-in .2s ;
 }
 nav{
     height: 50px;
-    
+    align-items: center;
     background-color: #80ec4d;
     font-weight: 900;
     cursor: pointer;
 }
-ul{
+.pcmenu{
     margin:0;
     margin-bottom: 20px;
     background-color: white;
     position: relative;
     display: none;
-    padding-right: 15px;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    padding-right: 60px;
+    width: 98px;
+    border: solid black 1px;
+    list-style-type: none;
+    
+}
+.mobmenu {
+    list-style-type: none;
+    margin-left: 60px;
+    display: none;
+    
+}
+
+li{
+    margin-right: 70px;
+    width: 143px;
+    height: 30px;
+    padding-top: 10px;
+    border-bottom: gray solid 1px;
+    align-items: center;
+    font-family: 'poppins','sans-serif';
+    font-weight: 500;
+    
 }
 .texto{
     display: flex;
@@ -64,7 +96,7 @@ ul{
 .Times, .Jogos, .Campeoes{
     flex-direction: column;
 }
-nav .opa:hover{
+nav .aba:hover{
     background-color: #34eb3d;
 }
 h1,p{
@@ -75,18 +107,18 @@ h1,p{
 a{
     color: black;
     text-decoration: none;
-    
+    cursor: pointer;
 }
-main{
- 
+
+main, iframe{
     background-color: #d9d9d9;
-    height: 464px;
+    height: 480px;
 }
-main h1{
+ .dia{
     color: #41268D;
     padding-left: 20px;
 }
-.col1,.col2, .opa{
+.col1,.col2, .aba{
     display: flex;
 }
 .mobjogo{
@@ -106,28 +138,43 @@ main h1{
     background-repeat: no-repeat;
     margin-right: 100px;
     margin-top: 10px;
+    
 }
 .jogo p{
     text-align: center;
     font-weight: 600;
 }
+.jogo img{
+    transition: 1s;
+    
+}
+.jogo img:hover{
+    scale: 1.025;
+}
 footer{
     background-color: #163bbf;
     height: 107px;
+    
 }
 .redes{
     color: #d9d9d9;
     padding-left: 10px;
     padding-top: 5px;
+    
+}
+.fa-brands{
+    color: #d9d9d9;
+    font-size: 25px;
+    transition: 1s;
+}
+.fa-brands:hover{
+    scale: 1.1;
 }
 .fa-instagram{
     margin-left: 250px;
-    font-size: 25px;
-    
 }
 .fa-facebook, .fa-twitter{
     margin-left: 10px;
-    font-size: 25px;
 }
 .marca{
     padding-top: 25px;
@@ -135,7 +182,7 @@ footer{
     
 }
 .eu{
-    margin-right:250px;
+    margin-right:650px;
 }
 
 @media screen and (max-width: 600px) {
@@ -162,17 +209,33 @@ footer{
         display: flex;
     }
 
-    main{
-        height: 450px;
+    main, iframe{
+        height: 445px;
         width: 320px;
     }
     .mobile{
+        position: relative;
         display: block;
         width: 20%;
         height: 600px;
         background-color: green;
-        
+        transition: 1s;
+        z-index: 2;
+        overflow: hidden;
     }
+    .mobile.expandir{
+        width: 80%;
+    }
+    .mobcoisas{
+       
+        margin-left: 82px;
+        display: none;
+        align-items: center;
+        
+        padding-top: 5px;
+        color: #d9d9d9;
+    }
+    
     .fa-bars{
         margin-top: 80px;
         margin-left: 15px;
@@ -182,7 +245,10 @@ footer{
     }
     .normal{
         width: 70%;
-        
+        position: absolute;
+        left: 20%;
+        z-index: 0;
+        transition: 1s;
     }
     .mobjogo{
         width:200px;
@@ -205,7 +271,7 @@ footer{
     footer{
         height:90px;
         width: 100%;
-        
+        z-index: 1;
     }
     .redes i{
         font-size: 19px;
@@ -228,18 +294,14 @@ footer{
         height: 10px;
         margin-right: 10px;
     }
-    main h1{
+    iframe h1{
         font-weight: 500;
         font-size: 30px;
     }
     .redes p{
         font-size: 10px;
     }
-    .direitos{
-     
-        margin-right: 1000;
-        width: 500px;
-     
-    }
     
-}
+    
+} 
+
